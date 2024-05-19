@@ -5,6 +5,7 @@
 		<p v-if="!cardType" class="article-count">{{categoryData.totalArticle}} articles</p>
 		<p class="grey-txt"> Last update: {{ handleCountDate(categoryData.updatedOn) }}</p>
 		<div v-if="cardType === 'detailCard'" class="card-detail-txt">
+			<img class="img" src="../assets/icon/info.png"/>
 			<p>{{categoryData.description}}</p>
 		</div>
 	</div>
@@ -82,6 +83,9 @@ export default {
 			padding: 1em;
 			p{
 				color: $text-gray;
+			}
+			img{
+				max-width: 1em;
 			}
 		}
 	}
